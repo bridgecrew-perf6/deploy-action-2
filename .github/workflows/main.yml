@@ -23,5 +23,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           script: |
-            sudo apt-get install git -y
-            git clone https://github.com/yoonhyeokCho/deploy-action.git
+            cd server
+            git reset --hard
+            git fetch
+            git pull
